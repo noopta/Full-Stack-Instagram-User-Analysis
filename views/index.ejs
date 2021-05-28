@@ -1,0 +1,147 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Chartmetric Project</title>
+    <link rel = "stylesheet" href = "css/main.css">
+    <script src = "js/index.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class = "projectHome">
+        <div class = "homeHeader introFade1">
+            <h1 class = "title">Chartmetric Take Home Project: Instagram User Insights</h1>
+         
+        </div>
+        <div class = "logRow">
+            <h2 class = introFade2>User Log</h2>
+            <p class = "introFade3">View all the users parsed from the CSV file below</p>
+        </div>
+        
+        <div class = "allCards">
+
+        </div>
+    </div>
+
+    <div class = "analysisSection">
+        <div class = "analyticHeader">
+            <h1 class = "title">User Analytics</h1>
+         
+        </div>
+        <div class = "logRow">
+            <h2 class = "middleFade">General User Analytics</h2>
+            <p class = "middleFade2">View an overview analysis provided on all the instagram users parsed!</p>
+        </div>
+        <div class = "resultCards">
+            <div class="container">
+                <div class="section sectionFade1">
+                  <div class="section_header"><h2>Most Followers</h2></div>
+                  <div class="section_content">
+                    <span class = "mostFollowers"></span>
+                    <h5 id = "mostUsername">GREAT FOR STARTERS</h5>
+                    <p id = "followerSummary">Discover how to create your first projects.</p>
+                    
+                    <a href="#popup3" class="section_content-btn">VIEW TOP 3</a>
+                    <div id="popup3" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h1>Top Accounts With Followers</h1>
+                        <p id = "numSeven">yo</p>
+                        <p id = "numEight">yo</p>
+                        <p id = "numNine">yo</p>
+                      </div>
+                </div>
+                </div>
+            
+                <div class="section sectionFade2">
+                    <div class="section_header"><h2>Most Likes</h2></div>
+                    <div class="section_content">
+                      <span class = "mostLikes"></span>
+                      <h5 id = "mostLikesId">GREAT FOR STARTERS</h5>
+                      <p id = "likesSummary">Discover how to create your first projects.</p>
+                      
+                      <a href="#popup2" class="section_content-btn">VIEW TOP 3</a>
+                      <div id="popup2" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h1>Top Average Likes</h1>
+                        <p id = "numFour">yo</p>
+                        <p id = "numFive">yo</p>
+                        <p id = "numSix">yo</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="section sectionFade3">
+                    <div class="section_header"><h2>Most Engagement</h2></div>
+                    <div class="section_content">
+                      <span class = "mostEngagement"></span>
+                      <h5 id = "mostEngaged">GREAT FOR STARTERS</h5>
+                      <p id = "engagementSummary">Discover how to create your first projects.</p>
+                    
+                      
+                            <a href="#popup1" class=" section_content-btn">VIEW TOP 3</a>
+                            <div id="popup1" class="popup">
+                                <a href="#" class="close">&times;</a>
+                                <h1>Top Engagements</h1>
+                                <p id = "numOne">yo</p>
+                                <p id = "numTwo">yo</p>
+                                <p id = "numThree">yo</p>
+                              </div>
+                        
+                    
+                    </div>
+                  </div>
+
+            
+              </div>
+        </div>
+    </div>
+
+    <div class = "statisticsSection">
+        <div class = "homeHeader">
+            <h1 class = "title">CSV Parser Home</h1>
+         
+        </div>
+        <div class = "logRow">
+            <h2 class = "fade2">Advanced Analytics</h2>
+            <p class = "fade3">Get a more in-depth analysis using statistical methods.</p>
+        </div>
+        <div class = "scatterChart fade4" id="scatterchart_material" style="width: 900px; height: 500px"></div>
+        <div class = "rightSide">
+            <div class="sub-main">
+                <button class="button-two fade"><span class = "followMean">Hover Me</span></button>
+                <button class="button-two fade"><span class = "engageMean">Hover Me</span></button>
+                <button class="button-two fade"><span class = "followSD">Hover Me</span></button>
+                <button class="button-two fade"><span class = "engageSD">Hover Me</span></button>
+                <button class="button-two fade"><span class = "showSlope">Hover Me</span></button>
+              </div>
+        </div>
+        <div class = "summary fade5">
+            <h3 >Data Summary</h3>
+            <p>Using Simple Statistic's linear regression API call to find data for the line of best fit, we can see from the result that the y-intercept of the dataset for Followers is 7738.06 and the slope is -4781.55</p>
+            <p>From what we can see, as user engagement increases, the number of followers seems to decrease. Furthermore, this is illustrated in the calculation for the slope, with a negative "m" value indicating a downwards trending graph. The large standard deviation for the "followers" data column indicates that the data points are far from the mean on average.</p>
+            <p>Using the formula for calculating confidence intervals (mean +/- Z(s / sqrt(n))), we can say that with 95% confidence the follower population mean is between 2760 and 6640.</p>
+            <p>We can also say that with 95% confidence the population mean for user engagement values is between 0.0375 and 0.0905.</p>
+        </div>
+      
+    </div>
+
+</body>
+
+</html>
