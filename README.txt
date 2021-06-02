@@ -17,8 +17,9 @@ Instructions For Running My Program:
 1. Unzip all files into a directory of your choosing.
 2. Using an IDE Terminal of your choice, or your command prompt, "cd" into the project directory where you are at the same level as "app.js".
 3. On the command prompt, run "npm install" to install the dependencies required.
-4. Upon completion of the previous command, then run "npm start".
-5. Go on your browser and enter "http://localhost:3000" as the URL and the project should be viewable!
+4. Then run "npm install csv-parser".
+5. Upon completion of the previous command, then run "npm start".
+6. Go on your browser and enter "http://localhost:3000" as the URL and the project should be viewable!
 
 Explanations Of Any Assignment Struggles (If Any):
 I did not face too many struggles throughout this assignment; most of the issues I could debug. One issue that I was able to work around was choosing which language to run my backend on. 
